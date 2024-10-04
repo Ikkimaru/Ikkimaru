@@ -38,4 +38,7 @@ jobs:
         git config --local user.name "GitHub Action"
         git add README.md
         git commit -m "Update current_hi in README"
-        git push
+      
+    - name: Push changes
+      run: |
+        git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/Ikkimaru/Ikkimaru.git
