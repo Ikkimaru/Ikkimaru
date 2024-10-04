@@ -1,5 +1,5 @@
 ## Hi there 👋
-Here's my current handicap index: **<!-- current_hi -->**
+Here's my current handicap index: **12.2**
 <!--
 **Ikkimaru/Ikkimaru** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
