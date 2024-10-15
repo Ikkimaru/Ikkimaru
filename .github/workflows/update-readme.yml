@@ -33,6 +33,7 @@ jobs:
     - name: Update README.md
       run: |
         hi_value=$(cat hi_value.txt)
+        sed -i 's/(<!--HI-->)[^,]*/, \1,/g' README.md
         sed -i "s/<!--HI-->/<!--HI-->$hi_value/g" README.md
 
     - name: Commit changes
