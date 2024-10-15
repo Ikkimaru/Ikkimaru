@@ -35,13 +35,16 @@ jobs:
         hi_value=$(cat hi_value.txt)
         sed -i "s/(<!--HI-->)[^<]*<!--HI-->/$1$hi_value<!--HI-->/g" README.md
 
-
     - name: Commit changes
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add README.md hi_value.txt
-        git commit -m "Update current_hi in README"
+        git add README.md
+        if [ -n "$(git status --porcelain)" ]; then
+          git commit -m "Update current_hi in README"
+        else
+          echo "No changes to commit"
+        fi
     - name: Push changes
       run: |
         git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/Ikkimaru/Ikkimaru.git
