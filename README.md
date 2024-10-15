@@ -4,7 +4,7 @@ My journey in coding has been quite the adventure, filled with ups and downs, as
 
 Outside of coding, I’m passionate about golf, motorcycle riding, and playing computer games. These interests provide a great balance in my life and inspire my work. For instance, developing the GolfTracker app merges my love for golf with my programming skills, allowing me to create something meaningful for myself and fellow golf enthusiasts. When I'm not coding, you'll likely find me out on a ride or immersed in a new game, always looking for fresh ideas and inspiration. Each of these experiences shapes my coding journey, reminding me there's always something new to learn and explore.
 
-Here's my current handicap index: 🏌️‍♂️ **<!--HI-->12.212.2**, which updates every Monday, if it lowers, my GolfTracker app is working.
+Here's my current handicap index: 🏌️‍♂️ **<!--HI-->12.212.2<!--HI-->**, which updates every Monday, if it lowers, my GolfTracker app is working.
 
 
 ## 🌐 Socials:
