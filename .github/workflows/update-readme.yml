@@ -40,7 +40,11 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add README.md
-          git commit -m "Update current_hi in README"
+          if [ -n "$(git status --porcelain)" ]; then
+            git commit -m "Update current_hi in README"
+          else
+            echo "No changes to commit"
+          fi
 
       - name: Push changes
         run: |
