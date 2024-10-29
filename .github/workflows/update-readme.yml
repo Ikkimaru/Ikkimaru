@@ -30,10 +30,21 @@ jobs:
         run: |
           python get_hi.py > hi_value.txt  # Assuming your Python script outputs the value to a file
 
-      - name: Update README.md
+      - name: Read current_hi value from README.md
+        id: read_current_hi
+        run: |
+          current_hi=$(grep -oP '(?<=<!--HI-->).*?(?=<!--HI-->)' README.md)
+          echo "current_hi=$current_hi" >> $GITHUB_ENV
+
+      - name: Update README.md if needed
         run: |
           hi_value=$(cat hi_value.txt)
-          sed -i "s/<!--HI-->[^<]*<!--HI-->/<!--HI-->$hi_value<!--HI-->/g" README.md
+          if [ "$hi_value" != "$current_hi" ]; then
+            sed -i "s/<!--HI-->[^<]*<!--HI-->/$hi_value/g" README.md
+            echo "Updated README.md with new current_hi value."
+          else
+            echo "No change in current_hi value; README.md not updated."
+          fi
 
       - name: Commit changes
         run: |
