@@ -8,7 +8,7 @@ Outside of coding, I’m passionate about golf, motorcycle riding, and playing c
 
 When I'm not coding, you'll likely find me out on a ride or immersed in a new game, always seeking fresh ideas and inspiration. Each of these experiences shapes my coding journey, reminding me there’s always something new to learn and explore.
 
-Here's my current handicap index: 🏌️‍♂️ **<!--HI-->12.5<!--HI-->**, which updates every Monday, if it lowers, my GolfTracker app is working.
+Here's my current handicap index: 🏌️‍♂️ **12.3**, which updates every Monday, if it lowers, my GolfTracker app is working.
 
 
 ## 🌐 Socials:
