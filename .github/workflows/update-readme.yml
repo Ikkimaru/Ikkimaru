@@ -40,7 +40,14 @@ jobs:
         run: |
           hi_value=$(cat hi_value.txt)
           if [ "$hi_value" != "$current_hi" ]; then
-            sed -i "s/<!--HI-->[^<]*<!--HI-->/$hi_value/g" README.md
+            # Check if the markers already exist
+            if grep -q "<!--HI-->" README.md; then
+              # Update the value between existing markers
+              sed -i "s/<!--HI-->[^<]*<!--HI-->/<!--HI-->$hi_value<!--HI-->/g" README.md
+            else
+              # Add the markers and the value if they don't exist
+              echo -e "\n<!--HI-->$hi_value<!--HI-->" >> README.md
+            fi
             echo "Updated README.md with new current_hi value."
           else
             echo "No change in current_hi value; README.md not updated."
